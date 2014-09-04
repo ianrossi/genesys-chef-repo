@@ -1,0 +1,16 @@
+---
+driver:
+  name: docker
+  use_sudo: false
+  require_chef_omnibus: true
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: centos-6.4
+
+suites:
+  - name: default
+    run_list:
+      - recipe[genesys-dbserver::default]
