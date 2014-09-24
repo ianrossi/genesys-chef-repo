@@ -1,0 +1,9 @@
+chef_server_url "https://192.168.2.104"
+client_key "ianrossi.pem"
+
+require 'librarian/chef/integration/knife'
+cookbook_path Librarian::Chef.install_path
+
+validation_client_name "chef-validator"
+validation_key ".chef/validation.pem"
+node_name "ianrossi"
